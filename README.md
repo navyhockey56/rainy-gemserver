@@ -98,5 +98,5 @@ A simple way to upload your gems would be to build the gem locally, then use you
 gem build my-gem.gemspec
 gem inabox my-gem-1.0.0.gem -g http://some_username:a_password@12.345.67.89:9292
 ```
-Note: Replace `12.345.67.89` with your droplet's ip address
+Note: Replace `12.345.67.89` with your droplet's ip address  
 Note: Replace `some_username` with your basic auth username, and `a_password` with your basic auth password.
