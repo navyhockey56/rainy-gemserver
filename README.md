@@ -91,9 +91,9 @@ service nginx restart
 You will now be able to access your gemserver online! To do this, open `http://12.345.67.89:9292` in your favorite browser. Upon doing so, you should be prompted for your basic auth creds; when entered correctly, you should then be taken to your GemInABox homepage. Note: Replace `12.345.67.89` with your droplet's ip address.
 
 ## Adding gems to your gem server
-You can now upload gems to your private gem server using the GemInABox homepage or by directly putting a copy of the gem onto your droplet and uploading it via the command line.
+You can now upload gems to your private gem server using the GemInABox homepage or by uploading the gem from the command line.
 
-A simple way to upload your gems would be to build the gem locally, then use your local copy of `geminabox` to push the gem to your gem server with basic auth:
+To upload from the command line, build the gem locally, then use your local copy of `geminabox` to push the gem to your gem server with basic auth:
 ```bash
 gem build my-gem.gemspec
 gem inabox my-gem-1.0.0.gem -g http://some_username:a_password@12.345.67.89:9292
