@@ -93,12 +93,10 @@ You will now be able to access your gemserver online! To do this, open `http://1
 ## Adding gems to your gem server
 You can now upload gems to your private gem server using the GemInABox homepage or by directly putting a copy of the gem onto your droplet and uploading it via the command line.
 
-A simple way to upload your gems would be to build the gem locally, then use `scp` to copy the `.gem` file over to your droplet. For example, if you had a gem called `my-gem` on version `1.0.0`, then you would:
+A simple way to upload your gems would be to build the gem locally, then use your local copy of `geminabox` to push the gem to your gem server with basic auth:
 ```bash
 gem build my-gem.gemspec
-scp my-gem-1.0.0.gem root@12.345.67.89:~/rainy-gemserver/gems/
+gem inabox my-gem-1.0.0.gem -g http://some_username:a_password@12.345.67.89:9292
 ```
-Then from within your droplet, upload the gem with basic auth:
-```bash
-gem inabox ~/rainy-gemserver/gems/my-gem-1.0.0.gem -g http://some_username:a_password@localhost:9292
-```
+Note: Replace `12.345.67.89` with your droplet's ip address
+Note: Replace `some_username` with your basic auth username, and `a_password` with your basic auth password.
