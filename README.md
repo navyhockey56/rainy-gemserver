@@ -81,9 +81,9 @@ NGINX keeps its configurations within `/etc/ngnix`. Start by moving into this di
 ```bash
 cd /etc/nginx
 ```
-You should find a folder called `sites-available` within your ngnix config directory. We are going to replace the `site-available/default` file with the one provided in the rainy-gemserver repo and then reload nginx:
+You should find a folder called `sites-available` within your ngnix config directory. We are going to replace the `sites-available/default` file with the one provided in the rainy-gemserver repo and then reload nginx:
 ```bash
-cp ~/rainy-gemserver/ngnix/site-available/default /etc/ngnix/
+cp ~/rainy-gemserver/ngnix/sites-available/default /etc/ngnix/sites-available
 service nginx restart
 ```
 
