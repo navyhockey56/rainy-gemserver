@@ -4,7 +4,7 @@
 # geminabox server
 # By default, the server will run on port 9292.
 
-@dir = '~/geminabox/'
+@dir = "#{ENV['HOME']}/rainy-gemserver/"
 
 worker_processes 2
 working_directory @dir
