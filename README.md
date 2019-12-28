@@ -29,7 +29,7 @@ snap install ruby --channel 2.5/stable --classic
 
 We are going to want our gems to be added to our PATH. As such, modify your `.bashrc` to include:
 ```bash
-PATH=$PATH:~/.gem/bin
+export PATH=$PATH:~/.gem/bin
 ```
 You can resource your `.bashrc` with
 ```bash
